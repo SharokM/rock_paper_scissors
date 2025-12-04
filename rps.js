@@ -30,7 +30,15 @@ function rpsGame () {
     } else {
         console.log("Invalid choice. Please choose rock, paper, or scissors.");
     }
-     
-    }
 
+    const replayPrompt = prompt("Do you want to play again? (yes/no): ");   
+    const replay = replayPrompt ? replayPrompt.toLowerCase(): "no";
+
+    if (replay === "yes") {
+        rpsGame();
+     
+    } else {
+        console.log("Thanks for playing, don't be a sore loser!");
+    }
+}
 rpsGame();
